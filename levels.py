@@ -5,7 +5,7 @@ from datetime import datetime
 import os
 import random
 
-os.chdir(r'C:\Users\Anwender\PycharmProjects\Normalo-Bot')
+os.chdir(r'put in the path of your bot file')
 
 
 class levels(commands.Cog):
