@@ -109,7 +109,8 @@ class levels(commands.Cog):
             embed.add_field(name="Experience", value=f"**{str(int(users[str(user.id)]['experience']))} / {exp}**", inline=True)
             embed.set_footer(text="Type more to level up!\nSpam is useless")
             await ctx.send(embed=embed)
-                #await ctx.send(f"**{user}** hat das Level : {users[str(user.id)]['level']}. Es fehlen noch {(5 * (lvl ** 2) + (50 * lvl) + 100) - int(users[str(user.id)]['experience'])}")
+	    with open('users.json', 'w')as f:
+            json.dump(users, f)
 
     @commands.command()
     @commands.has_permissions(administrator=True)
